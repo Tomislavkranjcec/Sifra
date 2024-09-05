@@ -2,19 +2,18 @@
 #define SIFRA_H
 
 #include <string>
-#include <iostream>
-#include <fstream>
 
 class Sifra {
 private:
     std::string text;
     std::string key;
+    std::string encryptedText; // Nova varijabla za pohranu enkriptovanog teksta
 
 public:
-    // Constructor
-    Sifra(const std::string& text);
+    // Konstruktor
+    Sifra(const std::string& txt, const std::string& kljuc);
 
-    // Methods to encrypt and decrypt text
+	// Metode za enkripciju i dekripciju
     std::string encrypt();
     std::string decrypt();
 };
